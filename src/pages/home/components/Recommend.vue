@@ -3,7 +3,7 @@
     <div class="title">热销推荐</div>
     <ul>
       <li class="item border-bottom"
-          v-for="item of recommendList"
+          v-for="item of list"
           :key="item.id">
         <img :src="item.imgUrl"
              class="item-img">
@@ -20,30 +20,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_200x200_50ca7bb1.jpg',
-        title: '东部华侨城大侠谷',
-        desc: '5.27-6.2六一有优惠！点进来看呀~'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_200x200_50ca7bb1.jpg',
-        title: '东部华侨城大侠谷',
-        desc: '5.27-6.2六一有优惠！点进来看呀~'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_200x200_50ca7bb1.jpg',
-        title: '东部华侨城大侠谷',
-        desc: '5.27-6.2六一有优惠！点进来看呀~'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1502/15/15ca1d0eab6bf46c.water.jpg_200x200_50ca7bb1.jpg',
-        title: '东部华侨城大侠谷',
-        desc: '5.27-6.2六一有优惠！点进来看呀~'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
