@@ -1,5 +1,6 @@
 <template>
-  <div class="container" @click="handleGallaryClick">
+  <div class="container"
+       @click="handleGallaryClick">
     <div class="wrapper">
       <swiper :options="swiperOptions">
         <swiper-slide v-for="(item, index) in imgs"
@@ -38,10 +39,10 @@ export default {
     }
   },
   methods: {
-    handleGallaryClick() {
+    handleGallaryClick () {
       this.$emit('close')
     }
-  },
+  }
 }
 </script>
 
