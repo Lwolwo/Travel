@@ -45,7 +45,12 @@ export default {
     }
   },
   activated () {
+    // 对全局事件的绑定 而不是组件当中 keep-alive提供activated
     window.addEventListener('scroll', this.handleScroll)
+  },
+  // 页面被隐藏执行这个事件的钩子
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 }
 </script>
